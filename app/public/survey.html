@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Survey</title>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Friends survey</h1>
+			<hr>
+			<a href="/api/friends"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Friends</button></a>
+		</div>
+
+		<div class="row">
+	
+			<div class="col-12">
+	
+				<div class="card">
+					<div class="card-header">
+						<h3><strong>Your profile</strong></h3>
+					</div>
+
+					<div class="card-body">
+						<form method="POST" role="form">
+			
+							<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" required>
+							</div>
+							
+							<div class="form-group">
+							<label for="photo">Upload a url of your photo</label>
+							<input type="text" id="photo" required>
+							</div>
+
+							<br>
+							<h4>Rate your attributes from 1-10</h4>
+							<hr><br>
+
+							<div class="form-group">
+							<label style="font-size:25px;">Do you share your food?</label>
+							<br><input type="radio" name="food" value="1">1 (Should've ordered it)
+							<br><input type="radio" name="food" value="2">2
+							<br><input type="radio" name="food" value="3">3
+							<br><input type="radio" name="food" value="4">4
+							<br><input type="radio" name="food" value="5">5 (I'll even cook for you)
+							</div>
+			
+							<div class="form-group">
+							<br><label style="font-size:25px;">Would you describe yourself as the life of the party?</label>
+							<br><input type="radio" name="social" value="1">1 (People suck)
+							<br><input type="radio" name="social" value="2">2
+							<br><input type="radio" name="social" value="3">3
+							<br><input type="radio" name="social" value="4">4
+							<br><input type="radio" name="social" value="5">5 (People call me a social buterfly)
+							</div>
+			
+							<div class="form-group">
+							<br><label style="font-size:25px;">How competitive are you?</label>
+							<br><input type="radio" name="competitive" value="1">1 (It's just a game)
+							<br><input type="radio" name="competitive" value="2">2
+							<br><input type="radio" name="competitive" value="3">3
+							<br><input type="radio" name="competitive" value="4">4
+							<br><input type="radio" name="competitive" value="5">5 (I'm not competitve, I just like to win)
+							</div>
+
+							<div class="form-group">
+							<br><label style="font-size:25px;">How likely are you to wash the dishes right away?</label>
+							<br><input type="radio" name="cleanliness" value="1">1 (It just needs to soak)
+							<br><input type="radio" name="cleanliness" value="2">2
+							<br><input type="radio" name="cleanliness" value="3">3
+							<br><input type="radio" name="cleanliness" value="4">4
+							<br><input type="radio" name="cleanliness" value="5">5 (Out of sight, out of mind)
+							</div>
+			
+							<div class="form-group">
+							<br><label style="font-size:25px;">How likely are you to keep money that your bank has mistakenly credited to you?</label>
+							<br><input type="radio" name="karma" value="1">1 (Sounds like some bad karma to me)
+							<br><input type="radio" name="karma" value="2">2
+							<br><input type="radio" name="karma" value="3">3
+							<br><input type="radio" name="karma" value="4">4
+							<br><input type="radio" name="karma" value="5">5 (Sounds like some shopping to me)
+							</div>
+			
+							<div class="form-group">
+							<br><label style="font-size:25px;">How much do you value science?</label>
+							<br><input type="radio" name="science" value="1">1 (I'm more of an arts person)
+							<br><input type="radio" name="science" value="2">2
+							<br><input type="radio" name="science" value="3">3
+							<br><input type="radio" name="science" value="4">4
+							<br><input type="radio" name="science" value="5">5 
+							</div>
+
+							<div class="form-group">
+							<br><label style="font-size:25px;">How likely are you to laugh at your own problems?</label>
+							<br><input type="radio" name="sarcasm" value="1">1 (There's no comedy in tragedy)
+							<br><input type="radio" name="sarcasm" value="2">2
+							<br><input type="radio" name="sarcasm" value="3">3
+							<br><input type="radio" name="sarcasm" value="4">4
+							<br><input type="radio" name="sarcasm" value="5">5 (Could I <strong><em>BE</em></strong> any sadder?)
+							</div>
+			
+							<div class="form-group">
+							<br><label style="font-size:25px;">How high was your social status in high school?</label>
+							<br><input type="radio" name="popularity" value="1">1 
+							<br><input type="radio" name="popularity" value="2">2
+							<br><input type="radio" name="popularity" value="3">3
+							<br><input type="radio" name="popularity" value="4">4
+							<br><input type="radio" name="popularity" value="5">5 (Practically prom royalty)
+							</div>
+							<div class="form-group">
+									
+							<br><label style="font-size:25px;">How independent are you?</label>
+							<br><input type="radio" name="independent" value="1">1 (You have to pay for electricity??)
+							<br><input type="radio" name="independent" value="2">2
+							<br><input type="radio" name="independent" value="3">3
+							<br><input type="radio" name="independent" value="4">4
+							<br><input type="radio" name="independent" value="5">5 
+							</div>
+
+							<div class="form-group">
+							<br><label style="font-size:25px;">Is it cheating if you guys <em>just</em> broke up?</label>
+							<br><input type="radio" name="break" value="1">1 (We were <strong>ON A <em>BREAK</em></strong>)
+							<br><input type="radio" name="break" value="2">2
+							<br><input type="radio" name="break" value="3">3
+							<br><input type="radio" name="break" value="4">4
+							<br><input type="radio" name="break" value="5">5 
+							</div>
+			
+			
+						</form>
+
+						<br>
+
+						<div class="text-right">
+							<button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-plus"></span> Add me!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal-match" class="modal" style="margin:50px;">
+			<div class="modal-content">
+				<br>
+				<h5 style="margin:auto;">Your Match is..</h5>
+				<br>
+				<h2 id="match-name"  style="margin:auto;"></h2>
+				<br>
+				<img id="match-image" class="materialboxed" width="300" style="margin:auto;" src="">
+				<br>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+
+		$("#add-btn").on("click", function(event) {
+			event.preventDefault();
+
+			// Test object:
+			// const user = {
+			// 	name: "Janice Hosenstein",
+			// 	photo: "http://1.bp.blogspot.com/-1rz5KxncouM/VSqQNEJYwkI/AAAAAAAABsk/elkIQ3NsMuw/s1600/janice-from-friends-34854473-500-564.jpg",
+			// 	scores: [
+			// 		2,
+			// 		1,
+			// 		1,
+			// 		3,
+			// 		1,
+			// 		2,
+			// 		5,
+			// 		2,
+			// 		4,
+			// 		6
+			// 	]
+			// };
+
+			// // Test match:
+			// const match = {
+			// 	name : "Chandler Bing",
+			// 	photo: "https://pixel.nymag.com/imgs/daily/vulture/2017/03/30/30-chandler-bing.w330.h330.jpg",
+			// 	scores: [
+			// 		2,
+			// 		1,
+			// 		1,
+			// 		3,
+			// 		1,
+			// 		2,
+			// 		5,
+			// 		2,
+			// 		4,
+			// 		5
+			// 	]
+			// };
+				
+			const user = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					parseInt($("input[name='food']:checked").val()),
+					parseInt($("input[name='social']:checked").val()),
+					parseInt($("input[name='competitive']:checked").val()),
+					parseInt($("input[name='cleanliness']:checked").val()),
+					parseInt($("input[name='karma']:checked").val()),
+					parseInt($("input[name='science']:checked").val()),
+					parseInt($("input[name='sarcasm']:checked").val()),
+					parseInt($("input[name='popularity']:checked").val()),
+					parseInt($("input[name='independent']:checked").val()),
+					parseInt($("input[name='break']:checked").val())
+				]
+			};
+
+			$.post("/api/friends", user, function(data) {
+
+				// Set the name and image values of friend match
+				$('#match-name').html(data.name + " !");
+				$("#match-image").attr("src", data.photo);
+
+				// Pop open the modal dialog
+				$('#modal-match').modal('toggle');
+
+			});
+		});
+	
+	</script>
+
+</body>
+</html>
+
