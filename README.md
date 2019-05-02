@@ -9,7 +9,7 @@ Friend Finder is a compatibility-based user matching application -- basically a 
 * [Bugs](#bugs)
 
 ## Getting Started <a name="getting-started"></a>
-To install, run the following codes in your git bash:
+To install, run the following codes in your Terminal/Bash window:
 
 ```bash
 git clone https://github.com/joshespr/11-Friend-finder.git
@@ -19,7 +19,7 @@ git clone https://github.com/joshespr/11-Friend-finder.git
 npm install
 ```
 
-To start the application on your localhost, run the following code in your git bash: 
+To start the application on your localhost, run the following code in the same window: 
 
 ```bash
 node server.js
