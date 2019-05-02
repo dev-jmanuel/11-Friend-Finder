@@ -1,3 +1,4 @@
+// Json object that holds all the friends
 var friends =  [
     {
     name : "Ross Geller",
@@ -97,4 +98,5 @@ var friends =  [
     }
 ];
 
+// Export JSON data
 module.exports = friends;

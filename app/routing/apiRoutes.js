@@ -9,6 +9,7 @@ module.exports = function(app) {
     // GET: all possible friends.
     app.get("/api/friends", function(req, res) {
         
+        // Create variable to build HTML script dynamically
         let html;
         html += "<html><head></head><body><h1>Friends list: </h1>";
     
@@ -19,6 +20,7 @@ module.exports = function(app) {
             html += "<p>Scores: " + friends[i].scores + " </p> <hr>";
         }
 
+        // Close HTML script
         html += "</body></html>";
 
         // Send the user the HTML file we dynamically created.
@@ -29,24 +31,6 @@ module.exports = function(app) {
     
     // POST: Incoming survey results with compatibility logic.
     app.post("/api/friends", function(req, res) {
-        
-        // Test object:
-        // const user = {
-		// 	name: "Janice Hosenstein",
-		// 	photo: "http://1.bp.blogspot.com/-1rz5KxncouM/VSqQNEJYwkI/AAAAAAAABsk/elkIQ3NsMuw/s1600/janice-from-friends-34854473-500-564.jpg",
-		// 	scores: [
-        //         2,
-        //         1,
-        //         1,
-        //         3,
-        //         1,
-        //         2,
-        //         5,
-        //         2,
-        //         4,
-        //         6
-		// 	]
-        // };
 
         // Insert user input object
         const user = req.body;
